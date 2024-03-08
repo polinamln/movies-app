@@ -1,0 +1,56 @@
+.section {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+  background-color: white;
+  width: 900px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.container {
+  padding: 10px;
+}
+
+.img {
+  padding: 5px;
+  border: solid 2px #4a4e69;
+}
+
+.title {
+  font-size: 46px;
+  color: #ae3e34;
+}
+
+.date {
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.tagline {
+  font-size: 18px;
+  margin-bottom: 21px;
+
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #dcd1bb;
+}
+
+.genresList {
+  list-style-type: circle;
+}
+
+.genre {
+  font-size: 16px;
+}
+
+.genres {
+  font-size: 18px;
+}
+
+.overview {
+  width: 900px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #dcd1bb;
+}

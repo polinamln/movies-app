@@ -1,0 +1,27 @@
+.link {
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  color: #ae3e34;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #dcd1bb;
+  padding: 28px;
+  border-bottom: solid 5px #d4c5a5;
+}
+
+.icon {
+  height: 38px;
+  width: 38px;
+}
+
+.icon:hover {
+  color: #ae3e34;
+}

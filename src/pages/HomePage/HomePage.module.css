@@ -1,0 +1,14 @@
+.component {
+  margin: 10px 20px;
+}
+
+.title {
+  font-weight: bolder;
+  color: #22223b;
+  text-align: center;
+}
+
+.titleSpan {
+  color: #ae3e34;
+  font-size: 42px;
+}
