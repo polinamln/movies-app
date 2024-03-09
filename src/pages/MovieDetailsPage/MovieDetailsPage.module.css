@@ -3,9 +3,9 @@
   gap: 16px;
   margin-bottom: 22px;
   background-color: white;
-  width: 900px;
   padding: 20px;
   border-radius: 10px;
+  max-height: 400px;
 }
 
 .container {
@@ -20,6 +20,7 @@
 .title {
   font-size: 46px;
   color: #223d40;
+  font-weight: 900;
 }
 
 .date {
@@ -34,7 +35,6 @@
   padding: 10px;
   border-radius: 10px;
   background-color: #7d8b8c;
-  border: solid 2px #4a4e69;
 }
 
 .genresList {
@@ -50,9 +50,61 @@
 }
 
 .overview {
-  width: 900px;
   padding: 20px;
   border-radius: 10px;
   background-color: #7d8b8c;
-  border: solid 2px #4a4e69;
+  height: 100%;
+}
+
+.goBack {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #7d8b8c;
+  border: none;
+  color: #0d0d0d;
+  text-decoration: none;
+  font-weight: bolder;
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 10px;
+  width: 80px;
+  text-align: center;
+}
+
+.goBack:hover {
+  background-color: #223d40c9;
+}
+
+.rightSection {
+  display: flex;
+}
+
+.linkTo {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #7d8b8c;
+  border: none;
+  color: #0d0d0d;
+  text-decoration: none;
+  font-weight: bolder;
+  margin-top: 20px;
+  display: block;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.linkTo:hover,
+.linkTo:focus {
+  background-color: #223d40c9;
+}
+
+.outlet {
+  display: block;
+}
+
+.navLinks {
+  display: flex;
 }

@@ -1,0 +1,19 @@
+.list {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+.name {
+  font-size: 21px;
+}
+
+.p {
+  font-size: 14px;
+}
+
+.item {
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
