@@ -9,7 +9,7 @@
 }
 
 .container {
-  padding: 10px;
+  padding: 10px 30px;
 }
 
 .img {
@@ -34,7 +34,7 @@
 
   padding: 10px;
   border-radius: 10px;
-  background-color: #7d8b8c;
+  background-color: #bfbfbf;
 }
 
 .genresList {
@@ -59,7 +59,7 @@
 .goBack {
   padding: 10px;
   border-radius: 10px;
-  background-color: #7d8b8c;
+  background-color: #bfbfbf;
   border: none;
   color: #0d0d0d;
   text-decoration: none;
@@ -69,6 +69,7 @@
   margin-bottom: 10px;
   width: 80px;
   text-align: center;
+  cursor: pointer;
 }
 
 .goBack:hover {
@@ -81,8 +82,9 @@
 
 .linkTo {
   padding: 10px;
+
   border-radius: 10px;
-  background-color: #7d8b8c;
+  background-color: #bfbfbf;
   border: none;
   color: #0d0d0d;
   text-decoration: none;
@@ -107,4 +109,16 @@
 
 .navLinks {
   display: flex;
+}
+
+.noPhoto {
+  background-color: #7d8b8c;
+  height: 300px;
+  width: 200px;
+  padding-top: 150px;
+  box-sizing: border-box;
+}
+
+.noPhotoText {
+  text-align: center;
 }

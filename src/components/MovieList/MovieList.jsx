@@ -7,10 +7,17 @@ export default function MovieList({ movies }) {
     <ul className={css.list}>
       {movies.map((movie) => (
         <li className={css.li} key={movie.id}>
-          <img
-            className={css.img}
-            src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-          ></img>
+          {movie.poster_path === null ? (
+            <div className={css.noPhoto}>
+              <p className={css.noPhotoText}>No photo available</p>
+            </div>
+          ) : (
+            <img
+              className={css.img}
+              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            ></img>
+          )}
+
           <Link
             state={location}
             className={css.item}

@@ -1,0 +1,35 @@
+.input {
+  padding: 10px 30px;
+  width: 300px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.container {
+  margin-top: 30px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #bfbfbf;
+  border: none;
+  color: #0d0d0d;
+  text-decoration: none;
+  font-weight: bolder;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #223d40c9;
+}

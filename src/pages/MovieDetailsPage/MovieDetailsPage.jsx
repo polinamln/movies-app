@@ -36,9 +36,9 @@ export default function MovieDetailsPage() {
   if (!movieDetail) {
     return <h3>Loading...</h3>;
   }
-  // console.log(movieDetail);
+  console.log(movieDetail);
 
-  // console.log(location);
+  console.log(location);
 
   return (
     <div className={css.container}>
@@ -47,11 +47,19 @@ export default function MovieDetailsPage() {
       </Link>
       <div className={css.section}>
         {loading && <h3 className={css.load}>Loading...</h3>}
-        <img
-          src={`https://image.tmdb.org/t/p/w500${movieDetail.backdrop_path}`}
-          alt={movieDetail.title}
-          className={css.img}
-        />
+
+        {movieDetail.backdrop_path === null ? (
+          <div className={css.noPhoto}>
+            <p className={css.noPhotoText}>No photo available</p>
+          </div>
+        ) : (
+          <img
+            src={`https://image.tmdb.org/t/p/w500${movieDetail.backdrop_path}`}
+            alt={movieDetail.title}
+            className={css.img}
+          />
+        )}
+
         <div>
           <h3 className={css.title}>{movieDetail.title}</h3>
           <p className={css.date}>{movieDetail.release_date}</p>

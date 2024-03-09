@@ -1,0 +1,38 @@
+.list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 20px;
+}
+
+.img {
+  width: 200px;
+}
+
+.item {
+  width: 260px;
+  height: 430px;
+  background-color: white;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.noPhoto {
+  height: 300px;
+  box-sizing: border-box;
+  background-color: #7d8b8c;
+  padding-top: 150px;
+}
+
+.noPhotoText {
+  text-align: center;
+}
+
+.name {
+  text-align: center;
+  font-size: 18px;
+}
+
+.text {
+  text-align: center;
+}

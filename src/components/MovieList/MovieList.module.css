@@ -34,3 +34,14 @@
   padding: 10px;
   width: 350px;
 }
+
+.noPhoto {
+  height: 450px;
+  box-sizing: border-box;
+  background-color: #7d8b8c;
+  padding-top: 200px;
+}
+
+.noPhotoText {
+  text-align: center;
+}

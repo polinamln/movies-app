@@ -56,3 +56,15 @@ export async function getMovie(query) {
 
   return response.data;
 }
+
+export async function getMovieCast(movieId) {
+  const response = await axios.get(`movie/${movieId}/credits`, {
+    headers: {
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MzM5ODVmNDliMjVhNDdkZWUzYzUwOGI0MDY4ZGE4NyIsInN1YiI6IjY1ZWIzYjJkNWFiYTMyMDE4NjczNzM3OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3fz3LQj9RAfC21npttrPIyK9-1bKdMmnngZk19U_oCg",
+    },
+    params: {},
+  });
+
+  return response.data;
+}

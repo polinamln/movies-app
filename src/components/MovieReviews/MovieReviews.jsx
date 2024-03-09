@@ -24,8 +24,6 @@ export default function MovieRewiews() {
     getMovieRewiew();
   }, [movieId]);
 
-  console.log(movieReview);
-
   return (
     <div>
       {loading && <h3 className={css.load}>Loading...</h3>}
