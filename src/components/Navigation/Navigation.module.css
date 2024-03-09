@@ -1,20 +1,19 @@
 .link {
   font-size: 24px;
   text-decoration: none;
-  color: black;
+  color: #0d0d0d;
 }
 
 .active {
-  color: #ae3e34;
+  color: #7d8b8c;
 }
 
 .list {
   display: flex;
   align-items: center;
-  gap: 12px;
-  background-color: #dcd1bb;
+  gap: 18px;
+  background-color: #455759;
   padding: 28px;
-  border-bottom: solid 5px #d4c5a5;
 }
 
 .icon {
@@ -23,5 +22,9 @@
 }
 
 .icon:hover {
-  color: #ae3e34;
+  color: #7d8b8c;
+}
+
+.link:hover {
+  color: #7d8b8c;
 }

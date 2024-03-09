@@ -19,7 +19,7 @@
 
 .title {
   font-size: 46px;
-  color: #ae3e34;
+  color: #223d40;
 }
 
 .date {
@@ -33,7 +33,8 @@
 
   padding: 10px;
   border-radius: 10px;
-  background-color: #dcd1bb;
+  background-color: #7d8b8c;
+  border: solid 2px #4a4e69;
 }
 
 .genresList {
@@ -52,5 +53,6 @@
   width: 900px;
   padding: 20px;
   border-radius: 10px;
-  background-color: #dcd1bb;
+  background-color: #7d8b8c;
+  border: solid 2px #4a4e69;
 }

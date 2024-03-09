@@ -7,17 +7,17 @@
 }
 
 .item {
-  color: #22223b;
   cursor: pointer;
   font-size: 18px;
   margin-bottom: 8px;
   text-decoration: none;
   display: flex;
   justify-content: center;
+  color: #223d40;
 }
 
 .item:hover {
-  color: #ae3e34;
+  color: #7d8b8c;
   transform: scale(1.1);
 }
 

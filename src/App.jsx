@@ -23,3 +23,8 @@ function App() {
 }
 
 export default App;
+
+// добавить елемент <Route path="*" element={<NotFound />} />
+
+// Додай асинхронне завантаження JS-коду для маршрутів застосунку,
+// використовуючи React.lazy та Suspense.
