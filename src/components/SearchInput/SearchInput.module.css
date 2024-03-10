@@ -1,6 +1,7 @@
 .input {
   padding: 10px 30px;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   margin-right: 10px;
   border: none;
   border-radius: 10px;
@@ -9,6 +10,7 @@
 
 .container {
   margin-top: 30px;
+  padding: 0 20px;
 }
 
 .form {
