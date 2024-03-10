@@ -41,8 +41,6 @@ export default function MoviesPage() {
 
     setSearchQuery(query);
     changeSearchValue(query);
-
-    actions.resetForm();
   }
 
   return (
