@@ -3,10 +3,22 @@ import { getMovie } from "../../api";
 import { Field, Form, Formik } from "formik";
 import MovieList from "../../components/MovieList/MovieList";
 import css from "./MoviesPage.module.css";
+import { useSearchParams } from "react-router-dom";
 
 export default function MoviesPage() {
   const [movie, setMovie] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [params, setParams] = useSearchParams();
+
+  const inputMovieValue = params.get("movieValue") ?? "";
+
+  // console.log(params);
+
+  function changeSearchValue(newValue) {
+    params.set("movieValue", newValue);
+    setParams(params);
+    console.log(newValue);
+  }
 
   useEffect(() => {
     async function getMovieByQuery() {
@@ -18,24 +30,26 @@ export default function MoviesPage() {
         console.error(e);
       }
     }
-    getMovieByQuery("");
+
+    if (searchQuery !== "") {
+      getMovieByQuery();
+    }
   }, [searchQuery]);
 
   function handleSubmit(values, actions) {
     const query = values.searchInput;
 
-    actions.resetForm();
-
     setSearchQuery(query);
-  }
+    changeSearchValue(query);
 
-  console.log(movie);
+    actions.resetForm();
+  }
 
   return (
     <div className={css.container}>
       <Formik
         initialValues={{
-          searchInput: "",
+          searchInput: inputMovieValue,
         }}
         onSubmit={handleSubmit}
       >
@@ -47,7 +61,7 @@ export default function MoviesPage() {
             placeholder="Search movies..."
           ></Field>
           <button className={css.btn} type="submit">
-            Search film
+            Search
           </button>
         </Form>
       </Formik>

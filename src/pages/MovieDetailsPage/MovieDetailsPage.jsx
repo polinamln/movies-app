@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { movieDetails } from "../../api";
 
 import {
@@ -16,8 +16,6 @@ export default function MovieDetailsPage() {
 
   const { movieId } = useParams();
 
-  const location = useLocation();
-
   useEffect(() => {
     async function getMovieDetail() {
       try {
@@ -33,16 +31,19 @@ export default function MovieDetailsPage() {
     getMovieDetail();
   }, [movieId]);
 
+  const location = useLocation();
+
+  const currentLocation = useRef(location.state ?? "/");
+
+  console.log(currentLocation);
+
   if (!movieDetail) {
     return <h3>Loading...</h3>;
   }
-  console.log(movieDetail);
-
-  console.log(location);
 
   return (
     <div className={css.container}>
-      <Link className={css.goBack} to={location.state ?? "/"}>
+      <Link className={css.goBack} to={currentLocation.current}>
         Go back!
       </Link>
       <div className={css.section}>

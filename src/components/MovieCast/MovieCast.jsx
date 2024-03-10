@@ -24,8 +24,6 @@ export default function MovieCast() {
     getCast();
   }, [movieId]);
 
-  console.log(cast);
-
   return (
     <div>
       {loading && <h3 className={css.load}>Loading...</h3>}
