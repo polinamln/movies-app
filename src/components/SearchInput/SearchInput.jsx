@@ -14,7 +14,6 @@ export default function SearchInput({ handleSubmit, inputMovieValue }) {
           <Field
             className={css.input}
             name="searchInput"
-            autoFocus
             placeholder="Search movies..."
           ></Field>
           <button className={css.btn} type="submit">
