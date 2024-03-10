@@ -2,10 +2,12 @@ import MovieList from "../../components/MovieList/MovieList";
 import { trendingMovies } from "../../api";
 import { useEffect, useState } from "react";
 import css from "./HomePage.module.css";
+import NotFoundPage from "../NotFoundPage/NotFoundPage";
 
 export default function HomePage() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     async function getMovies() {
@@ -14,6 +16,7 @@ export default function HomePage() {
         const data = await trendingMovies();
         setMovies(data);
       } catch (error) {
+        setError(true);
         console.log(error);
       } finally {
         setLoading(false);
@@ -28,6 +31,7 @@ export default function HomePage() {
       </h1>
       {loading && <h3 className={css.load}>Loading...</h3>}
       <MovieList movies={movies}></MovieList>
+      {error && <NotFoundPage></NotFoundPage>}
     </div>
   );
 }

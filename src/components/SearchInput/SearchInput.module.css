@@ -30,33 +30,6 @@
   cursor: pointer;
 }
 
-.btn:hover,
-.btnLoad:hover {
+.btn:hover {
   background-color: #223d40c9;
-  transform: scale(1.1);
-}
-
-.noMoviesText {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.load {
-  text-align: center;
-}
-
-.btnLoad {
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #617476;
-  border: none;
-  color: #0d0d0d;
-  text-decoration: none;
-  font-weight: bolder;
-  display: block;
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  text-align: center;
-  cursor: pointer;
 }

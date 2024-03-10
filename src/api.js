@@ -42,7 +42,7 @@ export async function movieReviews(movieId) {
   // console.log(response.data);
 }
 
-export async function getMovie(query) {
+export async function getMovie(query, page) {
   const response = await axios.get("search/movie", {
     headers: {
       Authorization:
@@ -50,7 +50,7 @@ export async function getMovie(query) {
     },
     params: {
       query: query,
-      page: 1,
+      page: page,
     },
   });
 
