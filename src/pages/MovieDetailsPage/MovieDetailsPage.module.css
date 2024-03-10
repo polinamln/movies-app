@@ -39,6 +39,8 @@
 
 .genresList {
   list-style-type: circle;
+  padding-left: 20px;
+  margin-bottom: 0;
 }
 
 .genre {
