@@ -1,5 +1,5 @@
 import { Suspense, lazy, useState } from "react";
-import css from "./App.css";
+import "./App.css";
 import { Route, Routes } from "react-router-dom";
 
 //~ ------ components ------
@@ -20,7 +20,7 @@ function App() {
     <div>
       <Navigation></Navigation>
 
-      <Suspense fallback={<h3 className={css.load}>Loading...</h3>}>
+      <Suspense fallback={<h3 className="load">Loading...</h3>}>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/movies_page" element={<MoviesPage />}></Route>
