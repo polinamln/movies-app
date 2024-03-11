@@ -80,7 +80,9 @@ export default function MovieDetailsPage() {
         </div>
       </div>
 
-      <p className={css.overview}>{movieDetail.overview}</p>
+      {movieDetail.overview !== "" && (
+        <p className={css.overview}>{movieDetail.overview}</p>
+      )}
 
       <div>
         <div className={css.navLinks}>

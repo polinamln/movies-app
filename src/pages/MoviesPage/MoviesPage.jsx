@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { getMovie } from "../../api";
 import MovieList from "../../components/MovieList/MovieList";
 import css from "./MoviesPage.module.css";
@@ -18,7 +18,7 @@ export default function MoviesPage() {
     setPage(page + 1);
   };
 
-  function handleSubmit(values, actions) {
+  function handleSubmit(values) {
     const query = values.searchInput;
 
     setMovie([]);
@@ -33,7 +33,6 @@ export default function MoviesPage() {
           return;
         }
 
-        console.log(params);
         setLoading(true);
         setError(false);
         const queryParams = params.get("movieValue");
@@ -69,8 +68,6 @@ export default function MoviesPage() {
       behavior: "smooth",
     });
   }
-
-  console.log(params);
 
   return (
     <div className={css.container}>
