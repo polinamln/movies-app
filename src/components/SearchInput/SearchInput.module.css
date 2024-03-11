@@ -21,7 +21,7 @@
 .btn {
   padding: 10px;
   border-radius: 10px;
-  background-color: #bfbfbf;
+  background-color: #617476;
   border: none;
   color: #0d0d0d;
   text-decoration: none;
@@ -30,8 +30,9 @@
   margin-bottom: 10px;
   text-align: center;
   cursor: pointer;
+  opacity: 0.7;
 }
 
 .btn:hover {
-  background-color: #223d40c9;
+  background-color: #b2c0c2;
 }

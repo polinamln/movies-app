@@ -54,6 +54,8 @@ export async function getMovie(query, page) {
     },
   });
 
+  // console.log(response);
+
   return response.data;
 }
 

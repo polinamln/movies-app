@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getMovie } from "../../api";
 import MovieList from "../../components/MovieList/MovieList";
 import css from "./MoviesPage.module.css";
-import { useLocation, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
+import { IoIosArrowUp } from "react-icons/io";
 import SearchInput from "../../components/SearchInput/SearchInput";
 
 export default function MoviesPage() {
   const [movie, setMovie] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("");
   const [params, setParams] = useSearchParams();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -18,12 +18,27 @@ export default function MoviesPage() {
     setPage(page + 1);
   };
 
+  function handleSubmit(values, actions) {
+    const query = values.searchInput;
+
+    setMovie([]);
+    params.set("movieValue", query);
+    setParams(params);
+  }
+
   useEffect(() => {
     async function getMovieByQuery() {
       try {
-        setError(false);
+        if (params.size === 0) {
+          return;
+        }
+
+        console.log(params);
         setLoading(true);
-        const data = await getMovie(searchQuery, page);
+        setError(false);
+        const queryParams = params.get("movieValue");
+
+        const data = await getMovie(queryParams, page);
 
         setTotalPages(data.total_pages);
 
@@ -32,7 +47,6 @@ export default function MoviesPage() {
         });
 
         if (data.results.length === 0) {
-          setSearchQuery("");
           setError(true);
         }
       } catch (e) {
@@ -42,25 +56,19 @@ export default function MoviesPage() {
       }
     }
 
-    if (searchQuery !== "") {
+    if (params !== "") {
       getMovieByQuery();
     }
-  }, [searchQuery, page]);
-
-  function handleSubmit(values, actions) {
-    const query = values.searchInput;
-
-    setMovie([]);
-    setSearchQuery(query);
-    changeSearchValue(query);
-  }
-
-  function changeSearchValue(newValue) {
-    params.set("movieValue", newValue);
-    setParams(params);
-  }
+  }, [params, page, setParams]);
 
   const inputMovieValue = params.get("movieValue") ?? "";
+
+  function scrollTo() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
 
   console.log(params);
 
@@ -85,6 +93,10 @@ export default function MoviesPage() {
           Load more
         </button>
       )}
+
+      <button onClick={scrollTo} className={css.btnScroll}>
+        <IoIosArrowUp className={css.btnArrow} />
+      </button>
     </div>
   );
 }
