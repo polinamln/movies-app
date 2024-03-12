@@ -23,9 +23,9 @@ function App() {
       <Suspense fallback={<h3 className="load">Loading...</h3>}>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
-          <Route path="/movies_page" element={<MoviesPage />}></Route>
+          <Route path="/movies" element={<MoviesPage />}></Route>
           <Route
-            path="/movie_details_page/:movieId"
+            path="/movies/:movieId"
             element={<MovieDetailsPage></MovieDetailsPage>}
           >
             <Route

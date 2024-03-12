@@ -20,7 +20,7 @@ export default function Navigation() {
         <NavLink className={activLink} to="/">
           HOME
         </NavLink>
-        <NavLink className={activLink} to="/movies_page">
+        <NavLink className={activLink} to="/movies">
           MOVIES
         </NavLink>
       </div>

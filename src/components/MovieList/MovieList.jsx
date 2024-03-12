@@ -4,6 +4,8 @@ import css from "./MovieList.module.css";
 export default function MovieList({ movies }) {
   const location = useLocation();
 
+  console.log(location.current);
+
   return (
     <div>
       <ul className={css.list}>
@@ -23,7 +25,7 @@ export default function MovieList({ movies }) {
             <Link
               state={location}
               className={css.item}
-              to={`/movie_details_page/${movie.id}`}
+              to={`/movies/${movie.id}`}
             >
               {movie.title}
             </Link>
