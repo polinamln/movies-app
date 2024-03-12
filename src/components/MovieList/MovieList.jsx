@@ -9,7 +9,7 @@ export default function MovieList({ movies }) {
   return (
     <div>
       <ul className={css.list}>
-        {movies.map((movie) => (
+        {movies.map((movi) => (
           <li className={css.li} key={movie.id}>
             {movie.poster_path === null ? (
               <div className={css.noPhoto}>
