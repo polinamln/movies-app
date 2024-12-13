@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
+  padding-left: 0;
 }
 
 .item {
@@ -14,10 +15,11 @@
   display: flex;
   justify-content: center;
   color: #223d40;
+  flex-direction: column;
+  align-items: center;
 }
 
-.item:hover {
-  color: #7d8b8c;
+.li:hover {
   transform: scale(1.03);
 }
 
@@ -33,6 +35,7 @@
   background-color: #ffffff;
   padding: 10px;
   width: 350px;
+  padding-top: 20px;
 }
 
 .noPhoto {

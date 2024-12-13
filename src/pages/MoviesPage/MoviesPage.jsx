@@ -77,6 +77,9 @@ export default function MoviesPage() {
       ></SearchInput>
 
       {loading && <h3 className={css.load}>Loading...</h3>}
+      {!loading && !error && movie.length === 0 && (
+        <h3 className={css.noMoviesText}>No movies found. Start searching!</h3>
+      )}
 
       {error && (
         <h2 className={css.noMoviesText}>

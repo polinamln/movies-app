@@ -16,19 +16,18 @@ export default function MovieList({ movies }) {
                 <p className={css.noPhotoText}>No photo available</p>
               </div>
             ) : (
-              <img
-                className={css.img}
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-              ></img>
+              <Link
+                state={location}
+                className={css.item}
+                to={`/movies/${movie.id}`}
+              >
+                <img
+                  className={css.img}
+                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                ></img>
+                {movie.title}
+              </Link>
             )}
-
-            <Link
-              state={location}
-              className={css.item}
-              to={`/movies/${movie.id}`}
-            >
-              {movie.title}
-            </Link>
           </li>
         ))}
       </ul>
